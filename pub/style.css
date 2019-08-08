@@ -1,24 +1,56 @@
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   padding-top: 32px;
+  height: 100%;
+  background: radial-gradient(white, whitesmoke);
+  font-family: tahoma;
   text-align: center;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 body * {
-  margin: 0;
+  display: block;
+  margin: 0 auto 32px;
   padding: 0;
+  outline: none;
+  transition: all 100ms linear;
+}
+
+label {
+  display: inline-block;
+  text-align: left;
+}
+
+input {
+  padding: 4px 8px;
+  margin: 0;
+  margin-top: 4px;
+  width: 256px;
+  font-size: 1.25rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 button {
-  padding: 4px 8px;
+  padding: 4px 8px 5px;
   font-weight: bold;
-  border: 1px solid;
+  border: 1px solid black;
   border-radius: 4px;
-  outline: none;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-
-.container {
-  padding: 16px 0;
+button:focus,
+button:hover {
+  background-color: cornflowerblue;
+  color: whitesmoke;
+}
+button:active {
+  transform: scale(0.95);
 }

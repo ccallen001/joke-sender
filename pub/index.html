@@ -4,17 +4,23 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Node App</title>
+  <title>🐔 Joke Sender 🐔</title>
 
   <link rel="icon" href="">
   <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <h1>Node App</h1>
-  <div class="container">
-    <button onclick="clickHandler()">Click Me</button>
-  </div>
+  <h1>🐔 Joke Sender 🐔</h1>
+  <label>
+      Your phone number:
+      <input type="text" onkeyup="(() => {
+        if (event.key === 'Enter') {
+          sendMessage();
+        }
+      })()"/>
+  </label>
+  <button onclick="sendMessage()">Send Joke</button>
 </body>
 
 <script src="./client.js"></script>
